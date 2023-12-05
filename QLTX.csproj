@@ -95,6 +95,7 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharpSigned.105.2.3\lib\net46\RestSharp.dll</HintPath>
     </Reference>
@@ -291,6 +292,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\TrangThaiData.cs" />
     <Compile Include="Forms\CrystalReport2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -301,6 +303,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\CrystalReportBangLuong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportBangLuong.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\DSTX.cs">
@@ -369,6 +383,36 @@
     </Compile>
     <Compile Include="PopsUp\BaoCao2.Designer.cs">
       <DependentUpon>BaoCao2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopsUp\baocao3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopsUp\baocao3.Designer.cs">
+      <DependentUpon>baocao3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopsUp\BaoCaoBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopsUp\BaoCaoBangLuong.Designer.cs">
+      <DependentUpon>BaoCaoBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopsUp\filter-tx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopsUp\filter-tx.Designer.cs">
+      <DependentUpon>filter-tx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopsUp\filter_bangluong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopsUp\filter_bangluong.Designer.cs">
+      <DependentUpon>filter_bangluong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopsUp\filter_report_tx_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopsUp\filter_report_tx_form.Designer.cs">
+      <DependentUpon>filter_report_tx_form.cs</DependentUpon>
     </Compile>
     <Compile Include="PopsUp\PopUpBangLuong_Add.cs">
       <SubType>Form</SubType>
@@ -533,6 +577,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrystalReportBangLuong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBangLuong.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DSTX.resx">
       <DependentUpon>DSTX.cs</DependentUpon>
     </EmbeddedResource>
@@ -566,6 +618,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopsUp\BaoCao2.resx">
       <DependentUpon>BaoCao2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopsUp\baocao3.resx">
+      <DependentUpon>baocao3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopsUp\BaoCaoBangLuong.resx">
+      <DependentUpon>BaoCaoBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopsUp\filter-tx.resx">
+      <DependentUpon>filter-tx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopsUp\filter_bangluong.resx">
+      <DependentUpon>filter_bangluong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopsUp\filter_report_tx_form.resx">
+      <DependentUpon>filter_report_tx_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopsUp\PopUpBangLuong_Add.resx">
       <DependentUpon>PopUpBangLuong_Add.cs</DependentUpon>

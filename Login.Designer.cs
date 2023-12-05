@@ -104,7 +104,9 @@ namespace PJ_For_Wang_Test
             this.txtMatKhau.Size = new System.Drawing.Size(221, 22);
             this.txtMatKhau.TabIndex = 11;
             this.txtMatKhau.Text = "123456";
+            this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // txtTaiKhoan
             // 
@@ -115,6 +117,8 @@ namespace PJ_For_Wang_Test
             this.txtTaiKhoan.TabIndex = 10;
             this.txtTaiKhoan.Text = "admin";
             this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
+            this.txtTaiKhoan.Enter += new System.EventHandler(this.txtTaiKhoan_Enter);
+            this.txtTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTaiKhoan_KeyDown);
             // 
             // label2
             // 

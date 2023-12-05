@@ -47,7 +47,7 @@ namespace PJ_For_Wang_Test.PopsUp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update tb_PhuongTien set DongXe = '{1}', MauXe = '{2}', BienSo = '{3}', NamSX = '{4}', SoKhung = '{5}' where MaPT = '{0}'",
+            string query = string.Format("update tb_PhuongTien set DongXe = N'{1}', MauXe = N'{2}', BienSo = N'{3}', NamSX = N'{4}', SoKhung = N'{5}' where MaPT = '{0}'",
                txtMaPT.Text,txtDongXe.Text, txtMauXe.Text, txtBienSoXe.Text, txtNSX.Text, txtSoKhung.Text);
             bool kt = kn.thucthi(query);
             if (kt == true)

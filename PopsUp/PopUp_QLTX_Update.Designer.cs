@@ -55,9 +55,9 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(278, 439);
+            this.btnUpdate.Location = new System.Drawing.Point(64, 452);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(75, 28);
             this.btnUpdate.TabIndex = 39;
             this.btnUpdate.Text = "Đồng Ý";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(54, 439);
+            this.button1.Location = new System.Drawing.Point(264, 452);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 28);
             this.button1.TabIndex = 38;
             this.button1.Text = "Không";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,55 +75,58 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             // txtGioiTinh
             // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(498, 122);
+            this.txtGioiTinh.Location = new System.Drawing.Point(155, 236);
             this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(100, 22);
+            this.txtGioiTinh.Size = new System.Drawing.Size(198, 22);
             this.txtGioiTinh.TabIndex = 37;
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(154, 350);
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(154, 365);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker3.TabIndex = 36;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(154, 307);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(154, 322);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 35;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(154, 255);
+            this.txtDiaChi.Location = new System.Drawing.Point(154, 270);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(158, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(199, 22);
             this.txtDiaChi.TabIndex = 34;
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(154, 206);
+            this.txtCCCD.Location = new System.Drawing.Point(154, 203);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(158, 22);
+            this.txtCCCD.Size = new System.Drawing.Size(199, 22);
             this.txtCCCD.TabIndex = 33;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(154, 165);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(158, 22);
+            this.txtSDT.Size = new System.Drawing.Size(199, 22);
             this.txtSDT.TabIndex = 32;
             // 
             // txtMaTaiXe
             // 
             this.txtMaTaiXe.Location = new System.Drawing.Point(155, 40);
             this.txtMaTaiXe.Name = "txtMaTaiXe";
-            this.txtMaTaiXe.Size = new System.Drawing.Size(158, 22);
+            this.txtMaTaiXe.Size = new System.Drawing.Size(198, 22);
             this.txtMaTaiXe.TabIndex = 31;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(154, 122);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
@@ -133,13 +136,13 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             this.txtTenTaiXe.Location = new System.Drawing.Point(155, 78);
             this.txtTenTaiXe.Name = "txtTenTaiXe";
-            this.txtTenTaiXe.Size = new System.Drawing.Size(158, 22);
+            this.txtTenTaiXe.Size = new System.Drawing.Size(198, 22);
             this.txtTenTaiXe.TabIndex = 29;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(378, 126);
+            this.label9.Location = new System.Drawing.Point(51, 239);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 28;
@@ -148,7 +151,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 350);
+            this.label7.Location = new System.Drawing.Point(50, 365);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 17);
             this.label7.TabIndex = 27;
@@ -157,7 +160,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(50, 307);
+            this.label8.Location = new System.Drawing.Point(50, 322);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 17);
             this.label8.TabIndex = 26;
@@ -166,7 +169,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 260);
+            this.label4.Location = new System.Drawing.Point(50, 275);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 25;
@@ -175,7 +178,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 211);
+            this.label5.Location = new System.Drawing.Point(50, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 24;
@@ -223,17 +226,17 @@ namespace PJ_For_Wang_Test.PopsUp
             this.cbTrangThai.Items.AddRange(new object[] {
             "Đang Làm",
             "Đã Nghỉ Việc"});
-            this.cbTrangThai.Location = new System.Drawing.Point(245, 394);
+            this.cbTrangThai.Location = new System.Drawing.Point(155, 409);
             this.cbTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(108, 24);
+            this.cbTrangThai.Size = new System.Drawing.Size(198, 24);
             this.cbTrangThai.TabIndex = 40;
             this.cbTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 396);
+            this.label10.Location = new System.Drawing.Point(50, 411);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 17);
             this.label10.TabIndex = 41;
@@ -243,7 +246,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 526);
+            this.ClientSize = new System.Drawing.Size(417, 526);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.btnUpdate);

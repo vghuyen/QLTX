@@ -45,12 +45,15 @@ namespace PJ_For_Wang_Test.Forms
             this.tbGioHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLTXDataSetGioHD = new PJ_For_Wang_Test.QLTXDataSetGioHD();
             this.tb_GioHDTableAdapter = new PJ_For_Wang_Test.QLTXDataSetGioHDTableAdapters.tb_GioHDTableAdapter();
+            this.lbl_selected = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maTXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongGioHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongGioThucTeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hSLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGioHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGioHDBindingSource)).BeginInit();
@@ -171,6 +174,7 @@ namespace PJ_For_Wang_Test.Forms
             this.namDataGridViewTextBoxColumn,
             this.tongGioHDDataGridViewTextBoxColumn,
             this.tongGioThucTeDataGridViewTextBoxColumn,
+            this.LuongCB,
             this.hSLuongDataGridViewTextBoxColumn});
             this.dgvGioHD.DataSource = this.tbGioHDBindingSource;
             this.dgvGioHD.EnableHeadersVisualStyles = false;
@@ -190,6 +194,8 @@ namespace PJ_For_Wang_Test.Forms
             this.dgvGioHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGioHD.Size = new System.Drawing.Size(1075, 277);
             this.dgvGioHD.TabIndex = 10;
+            this.dgvGioHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGioHD_CellClick);
+            this.dgvGioHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGioHD_CellContentClick_1);
             // 
             // tbGioHDBindingSource
             // 
@@ -205,10 +211,31 @@ namespace PJ_For_Wang_Test.Forms
             // 
             this.tb_GioHDTableAdapter.ClearBeforeFill = true;
             // 
+            // lbl_selected
+            // 
+            this.lbl_selected.AutoSize = true;
+            this.lbl_selected.Location = new System.Drawing.Point(329, 84);
+            this.lbl_selected.Name = "lbl_selected";
+            this.lbl_selected.Size = new System.Drawing.Size(46, 17);
+            this.lbl_selected.TabIndex = 11;
+            this.lbl_selected.Text = "label3";
+            this.lbl_selected.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(297, 76);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 26);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
@@ -253,6 +280,14 @@ namespace PJ_For_Wang_Test.Forms
             this.tongGioThucTeDataGridViewTextBoxColumn.Name = "tongGioThucTeDataGridViewTextBoxColumn";
             this.tongGioThucTeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // LuongCB
+            // 
+            this.LuongCB.DataPropertyName = "LuongCB";
+            this.LuongCB.HeaderText = "Lương cơ bản";
+            this.LuongCB.MinimumWidth = 6;
+            this.LuongCB.Name = "LuongCB";
+            this.LuongCB.ReadOnly = true;
+            // 
             // hSLuongDataGridViewTextBoxColumn
             // 
             this.hSLuongDataGridViewTextBoxColumn.DataPropertyName = "HSLuong";
@@ -267,6 +302,8 @@ namespace PJ_For_Wang_Test.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1403, 676);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lbl_selected);
             this.Controls.Add(this.dgvGioHD);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNam);
@@ -302,12 +339,15 @@ namespace PJ_For_Wang_Test.Forms
         private QLTXDataSetGioHD qLTXDataSetGioHD;
         private System.Windows.Forms.BindingSource tbGioHDBindingSource;
         private QLTXDataSetGioHDTableAdapters.tb_GioHDTableAdapter tb_GioHDTableAdapter;
+        private System.Windows.Forms.Label lbl_selected;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTXDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongGioHDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongGioThucTeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LuongCB;
         private System.Windows.Forms.DataGridViewTextBoxColumn hSLuongDataGridViewTextBoxColumn;
     }
 }

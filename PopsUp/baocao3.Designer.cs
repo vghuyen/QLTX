@@ -1,7 +1,7 @@
 ﻿
 namespace PJ_For_Wang_Test.PopsUp
 {
-    partial class BaoCao2
+    partial class baocao3
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace PJ_For_Wang_Test.PopsUp
         /// </summary>
         private void InitializeComponent()
         {
+            this.cachedCrystalReport31 = new PJ_For_Wang_Test.Forms.CachedCrystalReport3();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
@@ -40,26 +41,26 @@ namespace PJ_For_Wang_Test.PopsUp
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1700, 950);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // BaoCao2
+            // baocao3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1700, 950);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "BaoCao2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.BaoCao2_Load);
+            this.Name = "baocao3";
+            this.Text = "baocao3";
+            this.Load += new System.EventHandler(this.baocao3_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Forms.CachedCrystalReport3 cachedCrystalReport31;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

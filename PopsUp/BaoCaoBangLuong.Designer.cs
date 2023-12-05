@@ -1,7 +1,7 @@
 ﻿
 namespace PJ_For_Wang_Test.PopsUp
 {
-    partial class BaoCao2
+    partial class BaoCaoBangLuong
     {
         /// <summary>
         /// Required designer variable.
@@ -40,20 +40,18 @@ namespace PJ_For_Wang_Test.PopsUp
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1700, 950);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // BaoCao2
+            // BaoCaoBangLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1700, 950);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "BaoCao2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.BaoCao2_Load);
+            this.Name = "BaoCaoBangLuong";
+            this.Text = "BaoCaoBangLuong";
+            this.Load += new System.EventHandler(this.BaoCaoBangLuong_Load);
             this.ResumeLayout(false);
 
         }

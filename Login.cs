@@ -22,6 +22,12 @@ namespace PJ_For_Wang_Test
         ketnoi kn = new ketnoi();
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            login();
+        }
+
+        private void login()
+        {
+
             string query = string.Format("select * from tb_User where TaiKhoan = '{0}' and MatKhau = '{1}'", txtTaiKhoan.Text, txtMatKhau.Text);
             DataSet ds = kn.laydulieu(query, "tb_User");
             if (ds.Tables["tb_User"].Rows.Count == 1)
@@ -59,7 +65,30 @@ namespace PJ_For_Wang_Test
 
         private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void txtTaiKhoan_Enter(object sender, EventArgs e)
+        {
+
+           
+
+        }
+
+        private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+            }
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+            }
         }
     }
 }

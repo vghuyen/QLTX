@@ -30,11 +30,9 @@ namespace PJ_For_Wang_Test.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSoKhung = new System.Windows.Forms.TextBox();
-            this.txtMaPT = new System.Windows.Forms.TextBox();
-            this.txtDongXe = new System.Windows.Forms.TextBox();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.lblThongTin = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -66,38 +64,18 @@ namespace PJ_For_Wang_Test.Forms
             this.label1.TabIndex = 20;
             this.label1.Text = "Quản lý / Phương Tiện";
             // 
-            // txtSoKhung
+            // txtTimkiem
             // 
-            this.txtSoKhung.ForeColor = System.Drawing.Color.LightGray;
-            this.txtSoKhung.Location = new System.Drawing.Point(233, 90);
-            this.txtSoKhung.Name = "txtSoKhung";
-            this.txtSoKhung.Size = new System.Drawing.Size(100, 22);
-            this.txtSoKhung.TabIndex = 18;
-            this.txtSoKhung.Text = "Số Khung";
-            this.txtSoKhung.Enter += new System.EventHandler(this.txtSoKhung_Enter);
-            this.txtSoKhung.Leave += new System.EventHandler(this.txtSoKhung_Leave);
-            // 
-            // txtMaPT
-            // 
-            this.txtMaPT.ForeColor = System.Drawing.Color.LightGray;
-            this.txtMaPT.Location = new System.Drawing.Point(11, 90);
-            this.txtMaPT.Name = "txtMaPT";
-            this.txtMaPT.Size = new System.Drawing.Size(112, 22);
-            this.txtMaPT.TabIndex = 17;
-            this.txtMaPT.Text = "Mã Phương Tiện";
-            this.txtMaPT.Enter += new System.EventHandler(this.txtMaPT_Enter);
-            this.txtMaPT.Leave += new System.EventHandler(this.txtMaPT_Leave);
-            // 
-            // txtDongXe
-            // 
-            this.txtDongXe.ForeColor = System.Drawing.Color.LightGray;
-            this.txtDongXe.Location = new System.Drawing.Point(128, 90);
-            this.txtDongXe.Name = "txtDongXe";
-            this.txtDongXe.Size = new System.Drawing.Size(100, 22);
-            this.txtDongXe.TabIndex = 16;
-            this.txtDongXe.Text = "Dòng Xe";
-            this.txtDongXe.Enter += new System.EventHandler(this.txtDongXe_Enter);
-            this.txtDongXe.Leave += new System.EventHandler(this.txtDongXe_Leave);
+            this.txtTimkiem.ForeColor = System.Drawing.Color.LightGray;
+            this.txtTimkiem.Location = new System.Drawing.Point(11, 90);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(112, 22);
+            this.txtTimkiem.TabIndex = 17;
+            this.txtTimkiem.Text = "Tìm kiếm";
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtMaPT_TextChanged);
+            this.txtTimkiem.Enter += new System.EventHandler(this.txtMaPT_Enter);
+            this.txtTimkiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimkiem_KeyDown);
+            this.txtTimkiem.Leave += new System.EventHandler(this.txtMaPT_Leave);
             // 
             // lblThongTin
             // 
@@ -111,9 +89,9 @@ namespace PJ_For_Wang_Test.Forms
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(821, 88);
+            this.btnSua.Location = new System.Drawing.Point(821, 84);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.Size = new System.Drawing.Size(75, 28);
             this.btnSua.TabIndex = 22;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -121,9 +99,9 @@ namespace PJ_For_Wang_Test.Forms
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(906, 88);
+            this.btnXoa.Location = new System.Drawing.Point(902, 84);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.Size = new System.Drawing.Size(75, 28);
             this.btnXoa.TabIndex = 23;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -131,10 +109,10 @@ namespace PJ_For_Wang_Test.Forms
             // 
             // btnThem2
             // 
-            this.btnThem2.Location = new System.Drawing.Point(723, 88);
+            this.btnThem2.Location = new System.Drawing.Point(731, 84);
             this.btnThem2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem2.Name = "btnThem2";
-            this.btnThem2.Size = new System.Drawing.Size(84, 23);
+            this.btnThem2.Size = new System.Drawing.Size(84, 28);
             this.btnThem2.TabIndex = 24;
             this.btnThem2.Text = "Thêm";
             this.btnThem2.UseVisualStyleBackColor = true;
@@ -148,14 +126,14 @@ namespace PJ_For_Wang_Test.Forms
             this.dgvQLPT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLPT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLPT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLPT.ColumnHeadersHeight = 30;
             this.dgvQLPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLPT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -255,10 +233,10 @@ namespace PJ_For_Wang_Test.Forms
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(360, 85);
+            this.btnSearch.Location = new System.Drawing.Point(143, 87);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(83, 32);
+            this.btnSearch.Size = new System.Drawing.Size(83, 28);
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -267,11 +245,14 @@ namespace PJ_For_Wang_Test.Forms
             // lbl_pt_id
             // 
             this.lbl_pt_id.AutoSize = true;
+            this.lbl_pt_id.Enabled = false;
+            this.lbl_pt_id.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_pt_id.Location = new System.Drawing.Point(486, 90);
             this.lbl_pt_id.Name = "lbl_pt_id";
             this.lbl_pt_id.Size = new System.Drawing.Size(46, 17);
             this.lbl_pt_id.TabIndex = 27;
             this.lbl_pt_id.Text = "label2";
+            this.lbl_pt_id.Visible = false;
             // 
             // FormQLPT
             // 
@@ -286,9 +267,7 @@ namespace PJ_For_Wang_Test.Forms
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSoKhung);
-            this.Controls.Add(this.txtMaPT);
-            this.Controls.Add(this.txtDongXe);
+            this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.lblThongTin);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormQLPT";
@@ -305,9 +284,7 @@ namespace PJ_For_Wang_Test.Forms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSoKhung;
-        private System.Windows.Forms.TextBox txtMaPT;
-        private System.Windows.Forms.TextBox txtDongXe;
+        private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Label lblThongTin;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;

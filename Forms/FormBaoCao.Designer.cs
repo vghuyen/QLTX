@@ -32,7 +32,6 @@ namespace PJ_For_Wang_Test.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDriverTM = new System.Windows.Forms.Button();
-            this.btnRPV = new System.Windows.Forms.Button();
             this.btnExpContract = new System.Windows.Forms.Button();
             this.btnRPDriver = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,31 +56,23 @@ namespace PJ_For_Wang_Test.Forms
             // 
             // btnDriverTM
             // 
-            this.btnDriverTM.Location = new System.Drawing.Point(27, 226);
+            this.btnDriverTM.Location = new System.Drawing.Point(27, 181);
             this.btnDriverTM.Name = "btnDriverTM";
             this.btnDriverTM.Size = new System.Drawing.Size(248, 50);
             this.btnDriverTM.TabIndex = 9;
             this.btnDriverTM.Text = "Bảng lương của tài xế";
             this.btnDriverTM.UseVisualStyleBackColor = true;
-            // 
-            // btnRPV
-            // 
-            this.btnRPV.Location = new System.Drawing.Point(27, 172);
-            this.btnRPV.Name = "btnRPV";
-            this.btnRPV.Size = new System.Drawing.Size(248, 48);
-            this.btnRPV.TabIndex = 8;
-            this.btnRPV.Text = "Danh sách phương tiện";
-            this.btnRPV.UseVisualStyleBackColor = true;
-            this.btnRPV.Click += new System.EventHandler(this.btnRPV_Click);
+            this.btnDriverTM.Click += new System.EventHandler(this.btnDriverTM_Click);
             // 
             // btnExpContract
             // 
-            this.btnExpContract.Location = new System.Drawing.Point(27, 282);
+            this.btnExpContract.Location = new System.Drawing.Point(27, 249);
             this.btnExpContract.Name = "btnExpContract";
             this.btnExpContract.Size = new System.Drawing.Size(248, 48);
             this.btnExpContract.TabIndex = 7;
             this.btnExpContract.Text = "Danh sách các tài xế hết hạn hợp đồng vào tháng [n]";
             this.btnExpContract.UseVisualStyleBackColor = true;
+            this.btnExpContract.Click += new System.EventHandler(this.btnExpContract_Click);
             // 
             // btnRPDriver
             // 
@@ -101,7 +92,6 @@ namespace PJ_For_Wang_Test.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDriverTM);
-            this.Controls.Add(this.btnRPV);
             this.Controls.Add(this.btnExpContract);
             this.Controls.Add(this.btnRPDriver);
             this.Name = "FormBaoCao";
@@ -116,7 +106,6 @@ namespace PJ_For_Wang_Test.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDriverTM;
-        private System.Windows.Forms.Button btnRPV;
         private System.Windows.Forms.Button btnExpContract;
         private System.Windows.Forms.Button btnRPDriver;
     }

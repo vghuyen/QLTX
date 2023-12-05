@@ -238,7 +238,7 @@ namespace PJ_For_Wang_Test
             this.panelTitleBar.Location = new System.Drawing.Point(204, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1199, 64);
+            this.panelTitleBar.Size = new System.Drawing.Size(1699, 64);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -259,14 +259,14 @@ namespace PJ_For_Wang_Test
             this.panelDesktopPanel.Location = new System.Drawing.Point(204, 64);
             this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(1199, 612);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(1699, 612);
             this.panelDesktopPanel.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 676);
+            this.ClientSize = new System.Drawing.Size(1903, 676);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

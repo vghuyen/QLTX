@@ -83,7 +83,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 231);
+            this.label4.Location = new System.Drawing.Point(25, 261);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 5;
@@ -110,7 +110,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 321);
+            this.label7.Location = new System.Drawing.Point(25, 341);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 17);
             this.label7.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 278);
+            this.label8.Location = new System.Drawing.Point(25, 298);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 17);
             this.label8.TabIndex = 6;
@@ -128,7 +128,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(339, 23);
+            this.label9.Location = new System.Drawing.Point(23, 218);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 8;
@@ -136,6 +136,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             // dTP_NgaySinh
             // 
+            this.dTP_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTP_NgaySinh.Location = new System.Drawing.Point(128, 100);
             this.dTP_NgaySinh.Name = "dTP_NgaySinh";
             this.dTP_NgaySinh.Size = new System.Drawing.Size(200, 22);
@@ -152,49 +153,51 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             this.txtSDT.Location = new System.Drawing.Point(128, 136);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(158, 22);
+            this.txtSDT.Size = new System.Drawing.Size(198, 22);
             this.txtSDT.TabIndex = 12;
             // 
             // txtCCCD
             // 
             this.txtCCCD.Location = new System.Drawing.Point(128, 177);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(158, 22);
+            this.txtCCCD.Size = new System.Drawing.Size(198, 22);
             this.txtCCCD.TabIndex = 13;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(128, 226);
+            this.txtDiaChi.Location = new System.Drawing.Point(128, 258);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(158, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(198, 22);
             this.txtDiaChi.TabIndex = 14;
             // 
             // dTP_NgayKyHD
             // 
-            this.dTP_NgayKyHD.Location = new System.Drawing.Point(128, 278);
+            this.dTP_NgayKyHD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dTP_NgayKyHD.Location = new System.Drawing.Point(129, 298);
             this.dTP_NgayKyHD.Name = "dTP_NgayKyHD";
             this.dTP_NgayKyHD.Size = new System.Drawing.Size(200, 22);
             this.dTP_NgayKyHD.TabIndex = 15;
             // 
             // dTP_NgayHetHD
             // 
-            this.dTP_NgayHetHD.Location = new System.Drawing.Point(128, 321);
+            this.dTP_NgayHetHD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dTP_NgayHetHD.Location = new System.Drawing.Point(129, 341);
             this.dTP_NgayHetHD.Name = "dTP_NgayHetHD";
             this.dTP_NgayHetHD.Size = new System.Drawing.Size(200, 22);
             this.dTP_NgayHetHD.TabIndex = 16;
             // 
             // txtGioiTinh
             // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(456, 23);
+            this.txtGioiTinh.Location = new System.Drawing.Point(130, 215);
             this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(100, 22);
+            this.txtGioiTinh.Size = new System.Drawing.Size(199, 22);
             this.txtGioiTinh.TabIndex = 17;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(27, 411);
+            this.button1.Location = new System.Drawing.Point(211, 421);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 18;
             this.button1.Text = "Không";
             this.button1.UseVisualStyleBackColor = true;
@@ -202,9 +205,9 @@ namespace PJ_For_Wang_Test.PopsUp
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(437, 411);
+            this.btnAdd.Location = new System.Drawing.Point(73, 421);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(75, 27);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Đồng Ý";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -220,7 +223,7 @@ namespace PJ_For_Wang_Test.PopsUp
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 365);
+            this.label10.Location = new System.Drawing.Point(25, 385);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 17);
             this.label10.TabIndex = 21;
@@ -229,19 +232,17 @@ namespace PJ_For_Wang_Test.PopsUp
             // cbTrangThai
             // 
             this.cbTrangThai.FormattingEnabled = true;
-            this.cbTrangThai.Items.AddRange(new object[] {
-            "Đang Làm",
-            "Đã Nghỉ Việc"});
-            this.cbTrangThai.Location = new System.Drawing.Point(128, 365);
+            this.cbTrangThai.Location = new System.Drawing.Point(129, 385);
             this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(121, 24);
+            this.cbTrangThai.Size = new System.Drawing.Size(200, 24);
             this.cbTrangThai.TabIndex = 23;
+            this.cbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbTrangThai_SelectedIndexChanged);
             // 
             // PopUp_QLTX_ADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 456);
+            this.ClientSize = new System.Drawing.Size(379, 465);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTenTX);

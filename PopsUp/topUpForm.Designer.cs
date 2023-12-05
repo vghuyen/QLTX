@@ -91,6 +91,7 @@ namespace PJ_For_Wang_Test.PopsUp
             this.Controls.Add(this.btm_topup);
             this.Controls.Add(this.txt_amount);
             this.Name = "topUpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "topUpForm";
             this.ResumeLayout(false);
             this.PerformLayout();

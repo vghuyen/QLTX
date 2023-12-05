@@ -20,7 +20,7 @@ namespace PJ_For_Wang_Test.Forms
         private void btnRPDriver_Click(object sender, EventArgs e)
         {
             Form miniPopup = new Form();
-            using (PopsUp.baocao1 popup = new PopsUp.baocao1())
+            using (PopsUp.filter_tx popup = new PopsUp.filter_tx())
             {
                 popup.Owner = miniPopup;
         
@@ -37,6 +37,39 @@ namespace PJ_For_Wang_Test.Forms
 
                 popup.ShowDialog();
             }
+        }
+
+        private void btnDriverTM_Click(object sender, EventArgs e)
+        {
+            
+            Form miniPopup = new Form();
+            using (PopsUp.filter_bangluong popup = new PopsUp.filter_bangluong())
+            {
+                popup.Owner = miniPopup;
+
+                popup.ShowDialog();
+            }
+            
+        }
+
+        private void btnExpContract_Click(object sender, EventArgs e)
+        {
+            Form miniPopup = new Form();
+            using (PopsUp.filter_report_tx_form popup = new PopsUp.filter_report_tx_form())
+            {
+                popup.Owner = miniPopup;
+
+                popup.ShowDialog();
+            }
+            /*
+             Form miniPopup = new Form();
+            using (PopsUp.baocao3 popup = new PopsUp.baocao3())
+            {
+                popup.Owner = miniPopup;
+
+                popup.ShowDialog();
+            }
+            */
         }
     }
 }

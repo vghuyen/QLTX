@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using PJ_For_Wang_Test.PopsUp;
+using PJ_For_Wang_Test.common;
 
 namespace PJ_For_Wang_Test.Forms
 {
@@ -24,24 +26,30 @@ namespace PJ_For_Wang_Test.Forms
 
         public void getData()
         {
-            string query = "select * from tb_TaiXe order by MaTX";
+            string query = "select *, "+
+                " CASE WHEN TrangThai = 0 THEN N'Đã nghỉ việc' ELSE N'Đang làm việc'  END AS trang_thai from tb_TaiXe"+
+                " order by MaTX";
             DataSet ds = kn.laydulieu(query, "tb_TaiXe");
             dgvQLTX.DataSource = ds.Tables["tb_TaiXe"];
+            dgvQLTX.Rows[0].Selected = true;
+            lbl_tx_id.Text = ds.Tables["tb_TaiXe"].Rows.Count > 0 ? dgvQLTX.Rows[0].Cells[0].Value.ToString() : "";
+
         }
-        
+
         private void FormDuAn_Load(object sender, EventArgs e)
         {
-          
-            
+            cbtrangthai.DataSource = TrangThaiData.items;
             getData();
 
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
+            /*
             string query = string.Format("select * from tb_TaiXe where MaTX = '{0}' OR TenTX = '{1}' OR MaTX = '{2}' ", txtMaTX.Text,txtTenTX.Text,txtSDT.Text );
             DataSet ds = kn.laydulieu(query, "tb_TaiXe");
             dgvQLTX.DataSource = ds.Tables["tb_TaiXe"];
+            */
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -59,12 +67,8 @@ namespace PJ_For_Wang_Test.Forms
             Form miniPopup = new Form();
             using (PopsUp.PopUp_QLTX_ADD popup = new PopsUp.PopUp_QLTX_ADD())
             {
-
-
                 popup.Owner = miniPopup;
                 popup.ShowDialog();
-
-
             }
         }
 
@@ -90,7 +94,7 @@ namespace PJ_For_Wang_Test.Forms
             string title = "Xóa tài xế";
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
             DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
+            if (result == DialogResult.OK)
             {
 
                 string query = string.Format("DELETE FROM tb_TaiXe where MaTX = '{0}'", lbl_tx_id.Text);
@@ -138,27 +142,10 @@ namespace PJ_For_Wang_Test.Forms
             }
         }
 
-        private void txtTenTX_Enter(object sender, EventArgs e)
-        {
-            if (txtTenTX.Text == "Tên Tài Xế")
-            {
-                txtTenTX.Text = "";
-                txtTenTX.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtTenTX_Leave(object sender, EventArgs e)
-        {
-            if (txtTenTX.Text == "")
-            {
-                txtTenTX.Text = "Tên Tài Xế";
-                txtTenTX.ForeColor = Color.LightGray;
-            }
-        }
 
         private void txtMaTX_Enter(object sender, EventArgs e)
         {
-            if (txtMaTX.Text == "Mã Tài Xế")
+            if (txtMaTX.Text == "Tìm kiếm")
             {
                 txtMaTX.Text = "";
                 txtMaTX.ForeColor = Color.Black;
@@ -169,27 +156,49 @@ namespace PJ_For_Wang_Test.Forms
         {
             if (txtMaTX.Text == "")
             {
-                txtMaTX.Text = "Mã Tài Xế";
+                txtMaTX.Text = "Tìm kiếm";
                 txtMaTX.ForeColor = Color.LightGray;
             }
         }
 
-        private void txtSDT_Enter(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtSDT.Text == "Số Điện Thoại")
+            onSearch();
+        }
+
+        private void onSearch()
+        {
+            int trangthai = 2;
+            if (cbtrangthai.Text == TrangThaiData.lamViec) trangthai = 1;
+            if (cbtrangthai.Text == TrangThaiData.nghiViec) trangthai = 0;
+            string query = string.Format("select *, CASE WHEN TrangThai = 0 THEN N'Đã nghỉ việc' ELSE N'Đang làm việc'  END AS trang_thai  from tb_TaiXe where (MaTX = '{0}' OR TenTX = '{0}' OR MaTX = '{0}' or 'Tìm kiếm' = '{0}') AND ({1} = 2 OR TrangThai = {1})", txtMaTX.Text, trangthai);
+            DataSet ds = kn.laydulieu(query, "tb_TaiXe");
+            dgvQLTX.DataSource = ds.Tables["tb_TaiXe"];
+        }
+
+        private void txtMaTX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaTX_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                txtSDT.Text = "";
-                txtSDT.ForeColor = Color.Black;
+                string searchValue = txtMaTX.Text.Trim();
+                if (searchValue.Length <1 || searchValue.Equals("Tìm kiếm"))
+                {
+
+                    txtMaTX.ForeColor = Color.LightGray;
+                    txtMaTX.Text = "Tìm kiếm";
+                }
+                onSearch();
             }
         }
 
-        private void txtSDT_Leave(object sender, EventArgs e)
+        private void cbtrangthai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txtSDT.Text == "")
-            {
-                txtSDT.Text = "Số Điện Thoại";
-                txtSDT.ForeColor = Color.LightGray;
-            }
+            onSearch();
         }
     }
 

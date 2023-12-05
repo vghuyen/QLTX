@@ -29,12 +29,9 @@ namespace PJ_For_Wang_Test.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -47,6 +44,10 @@ namespace PJ_For_Wang_Test.Forms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtNam = new System.Windows.Forms.TextBox();
+            this.txtThang = new System.Windows.Forms.TextBox();
+            this.txtMaTX = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBL)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,30 +69,6 @@ namespace PJ_For_Wang_Test.Forms
             this.label2.TabIndex = 1;
             this.label2.Text = "Bảng Lương";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(14, 82);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 22);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(118, 82);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(89, 22);
-            this.textBox2.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(221, 82);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(89, 22);
-            this.textBox3.TabIndex = 4;
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(652, 78);
@@ -101,6 +78,7 @@ namespace PJ_For_Wang_Test.Forms
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
@@ -112,6 +90,7 @@ namespace PJ_For_Wang_Test.Forms
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
@@ -123,6 +102,7 @@ namespace PJ_For_Wang_Test.Forms
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvQLBL
@@ -132,14 +112,14 @@ namespace PJ_For_Wang_Test.Forms
             this.dgvQLBL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBL.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLBL.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvQLBL.ColumnHeadersHeight = 30;
             this.dgvQLBL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaBangLuong,
@@ -227,19 +207,68 @@ namespace PJ_For_Wang_Test.Forms
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(296, 82);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 26);
+            this.button2.TabIndex = 60;
+            this.button2.Text = "Tìm";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtNam
+            // 
+            this.txtNam.ForeColor = System.Drawing.Color.LightGray;
+            this.txtNam.Location = new System.Drawing.Point(201, 84);
+            this.txtNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(89, 22);
+            this.txtNam.TabIndex = 59;
+            this.txtNam.Text = "Năm";
+            this.txtNam.Enter += new System.EventHandler(this.txtNam_Enter);
+            this.txtNam.Leave += new System.EventHandler(this.txtNam_Leave);
+            // 
+            // txtThang
+            // 
+            this.txtThang.ForeColor = System.Drawing.Color.LightGray;
+            this.txtThang.Location = new System.Drawing.Point(107, 84);
+            this.txtThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Size = new System.Drawing.Size(89, 22);
+            this.txtThang.TabIndex = 58;
+            this.txtThang.Text = "Tháng";
+            this.txtThang.Enter += new System.EventHandler(this.txtThang_Enter);
+            this.txtThang.Leave += new System.EventHandler(this.txtThang_Leave);
+            // 
+            // txtMaTX
+            // 
+            this.txtMaTX.ForeColor = System.Drawing.Color.LightGray;
+            this.txtMaTX.Location = new System.Drawing.Point(13, 84);
+            this.txtMaTX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaTX.Name = "txtMaTX";
+            this.txtMaTX.Size = new System.Drawing.Size(88, 22);
+            this.txtMaTX.TabIndex = 57;
+            this.txtMaTX.Text = "Mã Tài Xế";
+            this.txtMaTX.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtMaTX.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtMaTX.Leave += new System.EventHandler(this.txtMaTX_Leave);
+            // 
             // FormBangLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1403, 676);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtNam);
+            this.Controls.Add(this.txtThang);
+            this.Controls.Add(this.txtMaTX);
             this.Controls.Add(this.dgvQLBL);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -256,9 +285,6 @@ namespace PJ_For_Wang_Test.Forms
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
@@ -271,5 +297,9 @@ namespace PJ_For_Wang_Test.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtNam;
+        private System.Windows.Forms.TextBox txtThang;
+        private System.Windows.Forms.TextBox txtMaTX;
     }
 }

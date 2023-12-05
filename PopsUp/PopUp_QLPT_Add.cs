@@ -40,7 +40,7 @@ namespace PJ_For_Wang_Test.PopsUp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string query = string.Format("insert into tb_PhuongTien(MaPT,MaTX,DongXe,MauXe,BienSo,NamSX, SoKhung) values('{0}','{1}','{2}','{3}','{4}','{5}', '{6}')",
+            string query = string.Format("insert into tb_PhuongTien(MaPT,MaTX,DongXe,MauXe,BienSo,NamSX, SoKhung) values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}', N'{6}')",
             txtMaPT.Text, txtMaTX.Text, txtDongXe.Text, txtMauXe.Text, txtBienSoXe.Text, txtNSX.Text, txtSoKhung.Text);
             bool kt = kn.thucthi(query);
             if (kt == true)

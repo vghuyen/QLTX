@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PJ_For_Wang_Test.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,18 +42,36 @@ namespace PJ_For_Wang_Test.PopsUp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string query = string.Format("insert into tb_GioHD(MaTX, TongGioHD,TongGioThucTe,Thang, Nam) values ('{0}','{1}','{2}','{3}','{4}')",
+            string queryGioHoatDong = string.Format("insert into tb_GioHD(MaTX, TongGioHD,TongGioThucTe,Thang, Nam) " +
+                " values ('{0}', {1}, {2}, {3}, {4})",
               txtMaTX.Text, txtTongGioHD.Text, TongGioThucTe.Text, txtThang.Text, txtNam.Text);
-            bool kt = kn.thucthi(query);
-            if (kt == true)
+
+            int gioHD = Int32.Parse(txtTongGioHD.Text);
+            int gioThucTe = Int32.Parse(TongGioThucTe.Text);
+
+            int luongCoBan = Int32.Parse(txt_luong_co_ban.Text);
+            int thang = Int32.Parse(txtThang.Text);
+            int nam = Int32.Parse(txtNam.Text);
+            double bhyt = Int32.Parse(txt_luong_co_ban.Text) * 1.5 / 100;
+            double bhxh = Int32.Parse(txt_luong_co_ban.Text) * 8 / 100;
+            double tongLuong = Int32.Parse(txt_luong_co_ban.Text) / gioHD * gioThucTe - bhxh - bhyt;
+
+            string queryBangLuong = string.Format("insert into tb_BangLuong(MaTX, LuongCB,Thang,Nam, BHYT, BHXH, TongLuong) " +
+                " values('{0}','{1}',{2},{3},{4},{5}, {6})",
+              txtMaTX.Text, luongCoBan, thang, nam, bhyt, bhxh, tongLuong);
+            bool kt1 = kn.thucthi(queryGioHoatDong);
+            bool kt2 = kn.thucthi(queryBangLuong);
+            if (kt1 == true && kt2 == true)
             {
-                MessageBox.Show("Them thanh cong");
+                MessageBox.Show("Thêm thành công");
                 getData();
             }
             else
             {
-                MessageBox.Show("Them that bai");
+                MessageBox.Show("Thêm thất bại");
             }
+            FormGioHD.instance.getData();
+            this.Close();
         }
 
         private void txtTongGioHD_TextChanged(object sender, EventArgs e)
